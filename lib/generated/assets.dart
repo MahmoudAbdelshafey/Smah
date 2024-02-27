@@ -3,7 +3,10 @@ class Assets {
   Assets._();
 
   static const String fontsGridstarRegular = 'assets/fonts/Gridstar-Regular.otf';
+  static const String imagesFacebook = 'assets/images/facebook.png';
+  static const String imagesGmail = 'assets/images/gmail.png';
   static const String imagesLogo = 'assets/images/logo.png';
+  static const String imagesTwitter = 'assets/images/twitter.png';
   static const String lottieFilesDoctor = 'assets/lottieFiles/Doctor.json';
   static const String lottieFilesReading = 'assets/lottieFiles/Reading.json';
   static const String lottieFilesSearching = 'assets/lottieFiles/Searching.json';

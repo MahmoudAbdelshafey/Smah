@@ -2,7 +2,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:smah/core/Assets/Assets.dart';
 import 'package:smah/core/Constants/Constants.dart';
-import 'package:smah/features/login/presentation/view/Login_View.dart';
+import 'package:smah/features/LoginorSignUp/presentation/view/WelcomeView.dart';
 import 'package:smah/features/splash/presentation/view/widgets/fade_animtion.dart';
 
 class CustomLogoPreview extends StatefulWidget {
@@ -122,7 +122,7 @@ class _CustomLogoPreviewState extends State<CustomLogoPreview>
           if (status == AnimationStatus.completed) {
             Navigator.of(context).pushReplacement(
               ThisIsFadeRoute(
-                route: ThirdPage(),
+                route: WelcomeView(),
               ),
             );
              _timer3 = Timer(
