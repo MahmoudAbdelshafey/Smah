@@ -41,7 +41,8 @@ class _CustomSplashTitleState extends State<CustomSplashTitle> with SingleTicker
               child: Text(
                 'Smah',
                 style: normalTextStyleEn.copyWith(
-                  fontSize: 24
+                  fontSize: 24,
+                  color: Colors.white
 
                 ),
                 textAlign: TextAlign.center,

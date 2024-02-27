@@ -1,19 +1,15 @@
-import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:smah/core/Styles/Styles.dart';
 import 'package:smah/features/splash/presentation/view/widgets/CustomLogoPreview.dart';
 import 'package:smah/features/splash/presentation/view/widgets/CustomSplashTitle.dart';
 
-import '../../../login/presentation/view/Login_View.dart';
-import 'widgets/fade_animtion.dart';
+class SplashView extends StatefulWidget {
+  const SplashView({super.key});
 
-class SecondClass extends StatefulWidget {
   @override
-  _SecondClassState createState() => _SecondClassState();
+  _SplashViewState createState() => _SplashViewState();
 }
 
-class _SecondClassState extends State<SecondClass>
+class _SplashViewState extends State<SplashView>
     with TickerProviderStateMixin {
 
   @override
