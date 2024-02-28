@@ -23,7 +23,7 @@ class SmahApp extends StatelessWidget {
     return  GetMaterialApp(
       theme: LightTheme,
       debugShowCheckedModeBanner: false,
-      home:onboarding? SplashView(): const OnBoardingView(),
+      home: onboarding? const SplashView(): const OnBoardingView(),
     );
   }
 }

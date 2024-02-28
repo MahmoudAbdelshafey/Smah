@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:smah/core/Assets/Assets.dart';
 import 'package:smah/core/Constants/Constants.dart';
+import 'package:smah/features/LoginorSignUp/presentation/view/widgets/Login_SignUpButtons/Login_SignUpButtons.dart';
+import 'package:smah/features/LoginorSignUp/presentation/view/widgets/Login_SignUpButtons/socialMediaIcons.dart';
 
 import '../../../../core/Styles/Styles.dart';
+import 'widgets/Login_SignUpButtons/CustomDivider.dart';
 
 class WelcomeView extends StatelessWidget {
   const WelcomeView({super.key});
@@ -12,10 +15,15 @@ class WelcomeView extends StatelessWidget {
     return Scaffold(
       backgroundColor: kSecondry_Color,
       body: Column(
+
         children: [
+          const Spacer(flex: 3,),
           Image.asset(
-            Logo,
+            LogoIcon,
+            width: MediaQuery.of(context).size.width * 0.5,
+            height: MediaQuery.of(context).size.width * 0.5,
           ),
+          const Spacer(flex: 1,),
           Text(
             'Welcome To \n Smah',
             style: largeTextStyleEn.copyWith(
@@ -23,98 +31,16 @@ class WelcomeView extends StatelessWidget {
             ),
             textAlign: TextAlign.center,
           ),
-          Row(
-            children: [
-              SizedBox(
-                width: 20,
-              ),
-              Expanded(
-                child: Container(
-                  alignment: Alignment.center,
-                  height: 60,
-                  decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(40)),
-                  child: Text(
-                    'Login',
-                    style: normalTextStyleEn.copyWith(color: kSecondry_Color),
-                  ),
-                ),
-              ),
-              SizedBox(
-                width: 15,
-              ),
-              Expanded(
-                child: Container(
-                  alignment: Alignment.center,
-                  height: 60,
-                  decoration: BoxDecoration(
-                      color: kSecondry_Color,
-                      borderRadius: BorderRadius.circular(40),
-                      border: Border.all(color: Colors.white, width: 2)),
-                  child: Text(
-                    'SignUp',
-                    style: normalTextStyleEn.copyWith(color: Colors.white),
-                  ),
-                ),
-              ),
-              SizedBox(
-                width: 20,
-              ),
-            ],
+          const Spacer(flex: 2,),
+          const LoginSignUpButtons(),
+          const Spacer(flex: 2,),
+          const Padding(
+            padding:  EdgeInsets.only(bottom: 24.0),
+            child:  CustomDivider(),
           ),
-          Row(
-            children: [
-              Expanded(
-                child: Container(
-                  margin: EdgeInsets.symmetric(horizontal: 10),
-                  height: 1,
-                  color: Colors.white,
-                ),
-              ),
-              Text(
-                'Or Via Social Media',
-                style: normalTextStyleEn.copyWith(
-                    color: Colors.white, fontWeight: FontWeight.w400),
-              ),
-              Expanded(
-                child: Container(
-                  margin: EdgeInsets.symmetric(horizontal: 10),
-                  height: 1,
-                  color: Colors.white,
-                ),
-              ),
-            ],
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              GestureDetector(
-                onTap: (){},
-                child: Image.asset(
-                  'assets/images/facebook.png',
-                  width: 50,
-                  fit: BoxFit.cover,
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 15.0),
-                child: GestureDetector(
-                  onTap: (){},
-                  child: Image.asset('assets/images/facebook.png',
-                    width: 50,
-                    fit: BoxFit.cover,
-                  ),
-                ),
-              ),
-              GestureDetector(
-                onTap: (){},
-                child: Image.asset('assets/images/facebook.png',
-                  width: 50,
-                  fit: BoxFit.cover,),
-              ),
-            ],
-          ),
+          const SocialMediaIcons(),
+          const  Spacer(flex: 2,),
+
         ],
       ),
     );

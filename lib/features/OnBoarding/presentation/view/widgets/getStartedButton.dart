@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:smah/core/Constants/Constants.dart';
-import 'package:smah/features/login/presentation/view/Login_View.dart';
-
+import 'package:smah/features/LoginorSignUp/presentation/view/WelcomeView.dart';
 import '../../../../../core/Styles/Styles.dart';
 
 class GetStartedButton extends StatelessWidget {
@@ -24,7 +23,7 @@ class GetStartedButton extends StatelessWidget {
                 final pres = await SharedPreferences.getInstance();
                 pres.setBool('onBoarding', true);
 
-                Get.offAll(ThirdPage(),
+                Get.offAll(const WelcomeView(),
                     transition: Transition.rightToLeftWithFade,
                     duration: const Duration(milliseconds: 600));
               },
