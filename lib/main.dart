@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:smah/core/Themes/Themes.dart';
+import 'package:smah/features/SignUp/Presentation/view/SignUp.dart';
 import 'package:smah/features/login/presentation/view/Login_View.dart';
 import 'package:smah/features/splash/presentation/view/Splash_View.dart';
 

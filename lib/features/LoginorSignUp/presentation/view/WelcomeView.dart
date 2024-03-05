@@ -21,7 +21,7 @@ class WelcomeView extends StatelessWidget {
           Image.asset(
             LogoIcon,
             width: MediaQuery.of(context).size.width * 0.5,
-            height: MediaQuery.of(context).size.width * 0.5,
+            height: MediaQuery.of(context).size.width * 0.25,
           ),
           const Spacer(flex: 1,),
           Text(
